@@ -43,8 +43,8 @@ python main.py
 You will see a menu like:
 ```
 ------------ MAIN MENU ------------
-1. Download current prescribable content
-2. Load data
+1. Download current RxNorm prescribable content
+2. Load RxNorm data into PostgreSQL database
 3. Quit
 
 Your choice: 

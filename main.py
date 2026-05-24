@@ -57,8 +57,8 @@ def path_menu(create_tables):
 # the main menu
 while True:    
     main_menu_input = input("\n------------ MAIN MENU ------------\n"
-                            "1. Download current prescribable content\n"
-                            "2. Load data\n"
+                            "1. Download current RxNorm prescribable content\n"
+                            "2. Load RxNorm data into PostgreSQL database\n"
                             "3. Quit\n\n"
                             "Your choice: ")
 
