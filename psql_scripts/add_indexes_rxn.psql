@@ -1,0 +1,27 @@
+-- Start of code I did not write myself
+-- Adapted from:
+-- Title: Indexes_mysql_rxn.sql
+
+-- Author: National Library of Medicine (No individual author was named)
+
+-- Date: 2026-04-06
+
+-- Code version: Unknown
+
+-- Availability: https://download.nlm.nih.gov/rxnorm/RxNorm_full_prescribe_04062026.zip (after downloading, unzip and go to scripts/mysql/Indexes_mysql_rxn.sql)
+
+-- This version uses table and index name placeholders instead
+
+CREATE INDEX {rxnconso_str_index} ON {rxnconso_table}(STR);
+CREATE INDEX {rxnconso_rxcui_index} ON {rxnconso_table}(RXCUI);
+CREATE INDEX {rxnconso_tty_index} ON {rxnconso_table}(TTY);
+CREATE INDEX {rxnconso_code_index} ON {rxnconso_table}(CODE);
+
+CREATE INDEX {rxnsat_rxcui_index} ON {rxnsat_table}(RXCUI);
+CREATE INDEX {rxnsat_atv_index} ON {rxnsat_table}(ATV);
+CREATE INDEX {rxnsat_atn_index} ON {rxnsat_table}(ATN);
+
+CREATE INDEX {rxnrel_rxcui1_index} ON {rxnrel_table}(RXCUI1);
+CREATE INDEX {rxnrel_rxcui2_index} ON {rxnrel_table}(RXCUI2);
+CREATE INDEX {rxnrel_rela_index} ON {rxnrel_table}(RELA);
+-- End of code I did not write myself

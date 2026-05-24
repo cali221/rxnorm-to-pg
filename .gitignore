@@ -1,0 +1,4 @@
+downloaded_rxn_files/
+.env
+venv/
+__pycache__/
