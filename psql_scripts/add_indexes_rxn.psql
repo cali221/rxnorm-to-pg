@@ -10,7 +10,7 @@
 
 -- Availability: https://download.nlm.nih.gov/rxnorm/RxNorm_full_prescribe_04062026.zip (after downloading, unzip and go to scripts/mysql/Indexes_mysql_rxn.sql)
 
--- This version uses table and index name placeholders instead
+-- This version uses CREATE TABLE IF NOT EXISTS and table and index name placeholders instead
 
 CREATE INDEX IF NOT EXISTS {rxnconso_str_index} ON {rxnconso_table}(STR);
 CREATE INDEX IF NOT EXISTS {rxnconso_rxcui_index} ON {rxnconso_table}(RXCUI);
