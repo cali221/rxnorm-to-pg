@@ -2,7 +2,7 @@
 Python scripts to download and load RxNorm prescribable content, as described [here](https://www.nlm.nih.gov/research/umls/rxnorm/docs/prescribe.html), to a PostgreSQL database.
 <br><br>
 **Note:**
-This tool was developed to work with RxNorm prescribable content releases available on May 24–25, 2026. It may not work with future releases.
+This tool was developed to work with RxNorm prescribable content releases that were current on May 24–25, 2026. It may not work with future releases.
 <br><br>
 This product uses publicly available data courtesy of the U.S. National Library of Medicine (NLM), National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product.
 
