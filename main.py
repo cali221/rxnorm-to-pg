@@ -20,7 +20,8 @@ def path_menu(create_tables):
 
         rrf_path_menu_input = input(f"1. Use latest download path: {path_to_downloaded_files} \n"
                                      "2. Specify path to folder with .RRF files manually\n"
-                                     "3. Back\n\n")
+                                     "3. Back\n\n"
+                                     "Your choice: ")
         
         if rrf_path_menu_input == '1':
             if path_to_downloaded_files:
