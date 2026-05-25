@@ -85,7 +85,7 @@ def get_num_cols(curs, table_name, table_schema):
 
 def write_fixed_lines_into_table(curs, table_name, filepath, expected_ori_delim_num):
     """
-    for each line in RFF file specified in filepath,
+    for each line in rrf file specified in filepath,
     fix the line by replacing \ into \\ to escape backslashes
     and removing trailing | so the line can be inserted into
     the table specified as a row.

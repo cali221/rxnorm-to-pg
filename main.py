@@ -6,7 +6,7 @@ path_to_downloaded_files = None
 
 def path_menu(create_tables):
     """
-    show menu to select path to folder with the .RFF files
+    show menu to select path to folder with the .rrf files
     and load the data accordingly
     """
     while True:
@@ -18,21 +18,21 @@ def path_menu(create_tables):
             print('This will create tables named rxnconso, rxnsat and rxnrel')
             print('If tables with those names already exist, they will be dropped first and you will lose your data\n')    
 
-        rff_path_menu_input = input(f"1. Use latest download path: {path_to_downloaded_files} \n"
+        rrf_path_menu_input = input(f"1. Use latest download path: {path_to_downloaded_files} \n"
                                      "2. Specify path to folder with .RRF files manually\n"
                                      "3. Back\n\n")
         
-        if rff_path_menu_input == '1':
+        if rrf_path_menu_input == '1':
             if path_to_downloaded_files:
                 path = pathlib.Path(path_to_downloaded_files) / 'rrf'
             else:
                 print('No existing path to downloaded files')
                 continue
 
-        elif rff_path_menu_input == '2':
-            path = input('Absolute path to the folder containing the .RFF files: ')
+        elif rrf_path_menu_input == '2':
+            path = input('Absolute path to the folder containing the .rrf files: ')
 
-        elif rff_path_menu_input == '3':
+        elif rrf_path_menu_input == '3':
             break
 
         else:
@@ -40,9 +40,9 @@ def path_menu(create_tables):
 
         if pathlib.Path(path).is_dir():
             if create_tables == False:
-                rxnconso_table_name_input = input('Your table name for RXNCONSO.RFF: ')
-                rxnsat_table_name_input = input('Your table name for RXNSAT.RFF: ')
-                rxnrel_table_name_input = input('Your table name for RXNREL.RFF: ')
+                rxnconso_table_name_input = input('Your table name for RXNCONSO.RRF: ')
+                rxnsat_table_name_input = input('Your table name for RXNSAT.RRF: ')
+                rxnrel_table_name_input = input('Your table name for RXNREL.RRF: ')
 
                 try:
                     insertToDB(path, 
@@ -114,7 +114,8 @@ try:
                                         "2. Create tables named rxnconso, rxnsat and rxnrel then load data\n"
                                         "IMPORTANT: if you choose option 2 and tables with those names already exist, \n"
                                         "they will be dropped first and you will lose your data\n\n"
-                                        "3. Back\n\n")
+                                        "3. Back\n\n"
+                                        "Your choice: ")
                 
                 if load_menu_input == '1':
                     # path menu for loading data without creating tables

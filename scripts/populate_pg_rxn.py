@@ -44,28 +44,28 @@ def insertToDB(rrf_files_path,
                 create_rxn_tables(curs, create_table_sql_script_path)
                 print('Finished creating the tables.\n')
             
-            # expected RFF file names
-            rff_files_table_pairs = {'RXNCONSO': rxnconso_table_name, 
+            # expected rrf file names
+            rrf_files_table_pairs = {'RXNCONSO': rxnconso_table_name, 
                                      'RXNREL': rxnrel_table_name, 
                                      'RXNSAT': rxnsat_table_name}
 
-            # copy the data from RFF files into the tables and add indexes
-            for filename in rff_files_table_pairs.keys():
+            # copy the data from rrf files into the tables and add indexes
+            for filename in rrf_files_table_pairs.keys():
                 print(f'Loading {filename .upper()} data...')
 
                 # get expected number of columns in the table
-                expected_col_number = get_num_cols(curs, rff_files_table_pairs[filename], schema_to_use)
+                expected_col_number = get_num_cols(curs, rrf_files_table_pairs[filename], schema_to_use)
                 print(f'Expected number of columns: {expected_col_number}')
 
                 # path to the rrf file for the table
                 rrf_filepath = pathlib.Path(rrf_files_path) / f'{filename}.RRF'
 
                 # write fixed line in rrf file into the table
-                print(f'Table for {filename} is {rff_files_table_pairs[filename]}')
-                write_fixed_lines_into_table(curs, rff_files_table_pairs[filename], rrf_filepath, expected_col_number)
+                print(f'Table for {filename} is {rrf_files_table_pairs[filename]}')
+                write_fixed_lines_into_table(curs, rrf_files_table_pairs[filename], rrf_filepath, expected_col_number)
 
-                row_added = get_row_count(curs, rff_files_table_pairs[filename])
-                print(f'Added {row_added} rows to {rff_files_table_pairs[filename]}')
+                row_added = get_row_count(curs, rrf_files_table_pairs[filename])
+                print(f'Added {row_added} rows to {rrf_files_table_pairs[filename]}')
                 print(f'Finished loading {filename} data...\n')
 
             # add indexes
