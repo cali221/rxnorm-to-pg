@@ -109,7 +109,8 @@ try:
         elif main_menu_input == '2':
             while True:
                 load_menu_input = input("\n-------- LOAD MENU --------\n"
-                                        "1. Load without creating tables (you have existing tables for RXNCONSO, RXNSAT and RXNREL data)\n\n"
+                                        "1. Load without creating tables (you have existing tables for RXNCONSO, RXNSAT and RXNREL data)\n"
+                                        "NOTE: no upsert or deduplication logic is applied when loading into existing tables.\n\n"
                                         "2. Create tables named rxnconso, rxnsat and rxnrel then load data\n"
                                         "IMPORTANT: if you choose option 2 and tables with those names already exist, \n"
                                         "they will be dropped first and you will lose your data\n\n"
